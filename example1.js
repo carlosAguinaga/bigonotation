@@ -1,13 +1,15 @@
 function foo(array){
-  let sum = 0;
-  let product = 1;
-  for(let i = 0; i < array.length; i++){
-    sum += array[i];
+  let sum = 0; // O(1)
+  let product = 1; // O(1)
+  for(let i = 0; i < array.length; i++){ // O(n)
+    sum += array[i]; // O(n)
   }
-  for(let i = 0; i < array.length; i++){
-    product *= array[i];
+  for(let i = 0; i < array.length; i++){ // O(n)
+    product *= array[i]; // O(n)
   }
-  console.log(`${sum}, ${product}`);
+  console.log(`${sum}, ${product}`); // O(1)
 }
 
 //¿Cuál es la complejidad de tiempo?
+
+//la complejidad es de // O(3 + 4n) -> // O(n)
